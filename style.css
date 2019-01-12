@@ -1,18 +1,34 @@
 :root {
-	--dark-mode-invert: invert(90%); /* Legacy - to be removed */
-	--background-colour: #f5f5f5;
-	--standard-text-colour: #212529;
-	--muted-text-colour: #6c757d;
-	--link-text-colour: #007aff;
-	--link-hover-colour: #0056b3;
+	/* Background colours */
+	--background-light: #f5f5f5;
+	--background-dark: #212121;
+
+	/* Text colours */
+	--text-normal-light: #212529;
+	--text-muted-light: #6c757d;
+	--text-normal-dark: #c8c8c8;
+	--text-muted-dark: #888888;
+
+	/* Blue accent colour set (default-ish) */
+	--accent-normal-light: #007aff;
+	--accent-hover-light: #0056b3;
+	--accent-normal-dark: #0a84ff;
+	--accent-hover-dark: #409cff;
+
+	/* Live variables - do not change */
+	--live-background: var(--background-light);
+	--live-text: var(--text-normal-light);
+	--live-muted: var(--text-muted-light);
+	--live-link: var(--accent-normal-light);
+	--live-hover: var(--accent-hover-light);
 }
 
 body {
 	padding-top: 3rem;
 	padding-bottom: 2rem;
 	margin-bottom: 60px;
-	background-color: var(--background-colour);
-	color: var(--standard-text-colour);
+	background-color: var(--live-background);
+	color: var(--live-text);
 }
 
 h1 {
@@ -30,15 +46,15 @@ p {
 }
 
 a {
-	color: var(--link-text-colour);
+	color: var(--live-link);
 }
 
 a:hover {
-	color: var(--link-hover-colour);
+	color: var(--live-hover);
 }
 
 .accent_colour {
-	color: var(--link-text-colour) !important;
+	color: var(--live-link) !important;
 }
 
 .section_heading {
@@ -52,11 +68,11 @@ a:hover {
 	width: 100%;
 	height: 60px;
 	line-height: 60px;
-	background-color: var(--background-colour);
+	background-color: var(--live-background);
 }
 
 .text-muted {
-	color: var(--muted-text-colour) !important;
+	color: var(--live-muted) !important;
 }
 
 .appearance_day { /* Legacy - to be removed */
@@ -64,11 +80,11 @@ a:hover {
 }
 
 .appearance_night {
-	--background-colour: #212121 !important;
-	--standard-text-colour: #c8c8c8 !important;
-	--muted-text-colour: #888888 !important;
-	--link-text-colour: #0a84ff !important;
-	--link-hover-colour: #409cff !important; /* Was #148eff */
+	--live-background: var(--background-dark);
+	--live-text: var(--text-normal-dark);
+	--live-muted: var(--text-muted-dark);
+	--live-link: var(--accent-normal-dark);
+	--live-hover: var(--accent-hover-dark);
 }
 
 #current_time {
@@ -80,10 +96,10 @@ a:hover {
 		filter: var(--dark-mode-invert);
 	}*/
 	:root {
-		--background-colour: #212121;
-		--standard-text-colour: #c8c8c8;
-		--muted-text-colour: #888888;
-		--link-text-colour: #0a84ff;
-		--link-hover-colour: #409cff; /* Was #148eff */
+		--live-background: var(--background-dark);
+		--live-text: var(--text-normal-dark);
+		--live-muted: var(--text-muted-dark);
+		--live-link: var(--accent-normal-dark);
+		--live-hover: var(--accent-hover-dark);
 	}
 }
