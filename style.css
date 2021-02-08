@@ -123,6 +123,11 @@ a:hover {
 	color: var(--live-muted) !important;
 }
 
+.custom-badge {
+	background-color: var(--live-text);
+	color: var(--live-background);
+}
+
 .appearance_day { /* Legacy - to be removed */
 	filter: invert(0%);
 }
